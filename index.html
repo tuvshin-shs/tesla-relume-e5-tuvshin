@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tesla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar / 2 -->
+  <header class="navbar">
+    <div class="navbar__container">
+      <div class="navbar__brand">
+        <a href="#" class="navbar__logo" aria-label="Tesla home">
+          <img src="assets/tesla-logo.svg" alt="Tesla" width="120" height="16" />
+        </a>
+      </div>
+
+      <nav class="navbar__menu" id="navbar-menu" aria-label="Main">
+        <a href="#" class="navbar__link">Vehicle</a>
+        <a href="#" class="navbar__link">Energy</a>
+        <a href="#" class="navbar__link">Charging</a>
+        <button type="button" class="navbar__link navbar__dropdown" aria-expanded="false">
+          Waders
+          <img src="assets/chevron-down.svg" alt="" width="24" height="24" />
+        </button>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--primary btn--sm">Test Drive</a>
+        <button type="button" class="navbar__toggle" aria-label="Open menu" aria-controls="navbar-menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Header / 30 -->
+    <section class="hero">
+      <img class="hero__bg" src="assets/hero.png" alt="" />
+      <div class="hero__container">
+        <div class="hero__column">
+          <div class="hero__content">
+            <h1 class="heading-1">Model 3</h1>
+            <p class="text-medium">We sell hand-tied flies and rugged rods for the cold rivers of Montana. Our gear is built to last, like the men who use it.</p>
+          </div>
+          <div class="actions">
+            <a href="#" class="btn btn--primary">Order now</a>
+            <a href="#" class="btn btn--alt">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout / 652 -->
+    <section class="section section--gray">
+      <div class="container">
+        <article class="fsd-card">
+          <div class="fsd-card__content">
+            <div class="fsd-card__body">
+              <div class="section-title">
+                <p class="tagline">Proof</p>
+                <div class="section-title__content">
+                  <h2 class="heading-2">Full Self-Driving (supervised)</h2>
+                  <p class="text-medium fsd-card__desc">Makes every drive easier. Subscribe for $99/mo.1</p>
+                </div>
+              </div>
+              <div class="stats">
+                <div class="stat">
+                  <p class="heading-2">7x</p>
+                  <p class="text-regular">Fewer Collisions</p>
+                </div>
+                <div class="stat stat--wide">
+                  <p class="heading-2 stat__number">17,386,302,310</p>
+                  <p class="text-regular">Miles Driven</p>
+                </div>
+              </div>
+            </div>
+            <div class="actions actions--gap-24">
+              <a href="#" class="btn btn--secondary btn--ring">Shop</a>
+              <a href="#" class="btn btn--link">
+                Learn
+                <img src="assets/chevron-right.svg" alt="" width="24" height="24" />
+              </a>
+            </div>
+          </div>
+          <div class="fsd-card__media" data-youtube-id="TUDiG7PcLBs" data-title="Full Self-Driving (Supervised) | Tesla">
+            <img class="fsd-card__image" src="assets/fsd-video-poster.jpg" alt="Tesla Full Self-Driving (Supervised) video" />
+            <button type="button" class="fsd-card__play" aria-label="Play video: Full Self-Driving (Supervised)">
+              <img src="assets/play-button.svg" alt="" width="64" height="64" />
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Product / 6 -->
+    <section class="section section--gray">
+      <div class="container products">
+        <div class="products__title">
+          <div class="section-title products__heading">
+            <p class="tagline">Tagline</p>
+            <div class="section-title__content section-title__content--tight">
+              <h2 class="heading-2">Products</h2>
+              <p class="text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn--secondary">View all</a>
+        </div>
+
+        <div class="products__body">
+          <div class="products__track" id="products-track">
+            <article class="product">
+              <img class="product__image" src="assets/product-model-y-l.png" alt="Model Y L Premium" />
+              <div class="product__bottom">
+                <div class="product__info">
+                  <h3 class="product__name">Model Y L Premium</h3>
+                  <p class="product__pricing"><span class="product__variant">Starting at</span> <span class="product__price">$61,990</span></p>
+                </div>
+                <div class="product__actions">
+                  <a href="#" class="btn btn--secondary btn--block">Order Now</a>
+                  <a href="#" class="btn btn--outline btn--block">Learn More</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product">
+              <img class="product__image" src="assets/product-model-3.png" alt="Model 3" />
+              <div class="product__bottom">
+                <div class="product__info">
+                  <h3 class="product__name">Model 3</h3>
+                  <p class="product__pricing"><span class="product__variant">Lease From</span> <span class="product__price">$439/mo</span></p>
+                </div>
+                <div class="product__actions">
+                  <a href="#" class="btn btn--secondary btn--block">Order Now</a>
+                  <a href="#" class="btn btn--outline btn--block">Learn More</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product">
+              <img class="product__image" src="assets/product-model-y.png" alt="Model Y" />
+              <div class="product__bottom">
+                <div class="product__info">
+                  <h3 class="product__name">Model Y</h3>
+                  <p class="product__pricing"><span class="product__variant">Lease From</span> <span class="product__price">$499/mo</span></p>
+                </div>
+                <div class="product__actions">
+                  <a href="#" class="btn btn--secondary btn--block">Order Now</a>
+                  <a href="#" class="btn btn--outline btn--block">Learn More</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product">
+              <img class="product__image" src="assets/product-cybertruck.png" alt="Cybertruck" />
+              <div class="product__bottom">
+                <div class="product__info">
+                  <h3 class="product__name">Cybertruck</h3>
+                  <p class="product__pricing"><span class="product__variant">Variant</span> <span class="product__price">$55</span></p>
+                </div>
+                <div class="product__actions">
+                  <a href="#" class="btn btn--secondary btn--block">Order now</a>
+                  <a href="#" class="btn btn--outline btn--block">Learn More</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product">
+              <img class="product__image" src="assets/product-roadster.png" alt="Roadster" />
+              <div class="product__bottom">
+                <div class="product__info">
+                  <h3 class="product__name">Roadster</h3>
+                  <p class="product__pricing"><span class="product__variant">Variant</span> <span class="product__price">$55</span></p>
+                </div>
+                <div class="product__actions">
+                  <a href="#" class="btn btn--secondary btn--block">Reserve Now</a>
+                  <a href="#" class="btn btn--outline btn--block">Learn More</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="products__controls">
+            <img src="assets/slider-dots.svg" alt="" width="104" height="8" />
+            <div class="slider-buttons">
+              <button type="button" class="slider-arrow" data-dir="-1" aria-label="Previous products">
+                <img src="assets/arrow-back.svg" alt="" width="24" height="24" />
+              </button>
+              <button type="button" class="slider-arrow" data-dir="1" aria-label="Next products">
+                <img src="assets/arrow-forward.svg" alt="" width="24" height="24" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout / 362 -->
+    <section class="section">
+      <div class="container">
+        <div class="offers" id="offers">
+          <article class="offer-card">
+            <div class="offer-card__content">
+              <div class="offer-card__text">
+                <h3 class="heading-5">Current Offers</h3>
+                <p class="text-regular">Explore limited-time offers on Tesla vehicles.</p>
+              </div>
+              <a href="#" class="btn btn--link">
+                Learn More
+                <img src="assets/chevron-right-dark.svg" alt="" width="24" height="24" />
+              </a>
+            </div>
+            <div class="offer-card__media">
+              <img src="assets/offer-current.png" alt="" />
+            </div>
+          </article>
+
+          <article class="offer-card">
+            <div class="offer-card__content">
+              <div class="offer-card__text">
+                <h3 class="heading-5">2026 Annual Shareholder Meeting</h3>
+                <p class="text-regular">The future of Tesla is in your hands. Learn why your vote matters.</p>
+              </div>
+              <a href="#" class="btn btn--link">
+                Learn More
+                <img src="assets/chevron-right-dark.svg" alt="" width="24" height="24" />
+              </a>
+            </div>
+            <div class="offer-card__media">
+              <img src="assets/offer-shareholder.png" alt="" />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout / 155 -->
+    <section class="section section--flush-top">
+      <div class="container stack-80">
+        <img class="charge-map" src="assets/charge-map.png" alt="Map of Tesla Superchargers across the United States" />
+        <div class="charge__content">
+          <div class="section-title section-title--center">
+            <p class="tagline">Tagline</p>
+            <div class="section-title__content">
+              <h2 class="heading-2">Find Your Charge</h2>
+              <p class="text-medium">View the network of Tesla Superchargers and Destination Chargers available near you.</p>
+            </div>
+          </div>
+          <div class="actions actions--gap-24">
+            <a href="#" class="btn btn--secondary btn--ring">View Networks</a>
+            <a href="#" class="btn btn--link">
+              Learn More
+              <img src="assets/chevron-right-dark.svg" alt="" width="24" height="24" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer / 4 -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <a href="#" aria-label="Tesla home"><img src="assets/tesla-logo.svg" alt="Tesla" width="120" height="16" /></a>
+        </div>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="#">Privacy &amp; Legacy</a>
+          <a href="#">Vehicle Recalls</a>
+          <a href="#">Contact</a>
+          <a href="#">News</a>
+          <a href="#">Get Updates</a>
+        </nav>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/facebook.svg" alt="" width="24" height="24" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/instagram.svg" alt="" width="24" height="24" /></a>
+          <a href="#" aria-label="X"><img src="assets/x.svg" alt="" width="24" height="24" /></a>
+          <a href="#" aria-label="LinkedIn"><img src="assets/linkedin.svg" alt="" width="24" height="24" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/youtube.svg" alt="" width="24" height="24" /></a>
+        </div>
+      </div>
+      <div class="footer__credits">
+        <img class="footer__divider" src="assets/divider.svg" alt="" width="1280" height="1" />
+        <div class="footer__legal">
+          <p>© 2025 Tesla. All rights reserved.</p>
+          <a href="#">Locations</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookies Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
