@@ -21,7 +21,7 @@
 }
 
 /*
- * REBA design system tokens (from reba.mn), used by /styleguide.
+ * REBA design system tokens (from reba.mn), used by /reba-styleguide.
  * Prefixed "reba-" so they never collide with the Tesla tokens above.
  * `inline` so the font stacks resolve the next/font variables set on the styleguide layout.
  */
@@ -79,6 +79,71 @@
   --ease-reba-snap: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-reba-calm: cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-reba-page: cubic-bezier(0.65, 0, 0.15, 1);
+}
+
+/*
+ * Tesla Design System (TDS) tokens, read from tesla.com's public CSS (--tds-*), used by /styleguide.
+ * Prefixed "tds-" so they never collide with the site tokens above. Docs: data/tesla-tokens.ts.
+ */
+@theme {
+  --color-tds-grey-10: #171a20;
+  --color-tds-grey-20: #393c41;
+  --color-tds-grey-30: #5c5e62;
+  --color-tds-grey-35: #8e8e8e;
+  --color-tds-grey-40: #a2a3a5;
+  --color-tds-grey-50: #d0d1d2;
+  --color-tds-grey-60: #e2e3e3;
+  --color-tds-grey-65: #eeeeee;
+  --color-tds-grey-70: #f4f4f4;
+  --color-tds-blue-10: #2e4994;
+  --color-tds-blue-20: #3457b1;
+  --color-tds-blue-30: #3e6ae1;
+  --color-tds-red-10: #b74134;
+  --color-tds-red-20: #ed4e3b;
+  --color-tds-green: #12bb00;
+  --color-tds-yellow: #fbb01b;
+
+  /* tesla.com uses the proprietary "Universal Sans Display / Text"; Inter stands in here */
+  --font-tds: var(--font-inter), -apple-system, Arial, sans-serif;
+
+  --text-tds-130: 80px;
+  --text-tds-130--line-height: 96px;
+  --text-tds-120: 72px;
+  --text-tds-120--line-height: 72px;
+  --text-tds-110: 64px;
+  --text-tds-110--line-height: 64px;
+  --text-tds-100: 56px;
+  --text-tds-100--line-height: 56px;
+  --text-tds-90: 48px;
+  --text-tds-90--line-height: 56px;
+  --text-tds-80: 40px;
+  --text-tds-80--line-height: 48px;
+  --text-tds-75: 34px;
+  --text-tds-75--line-height: 44px;
+  --text-tds-70: 28px;
+  --text-tds-70--line-height: 36px;
+  --text-tds-60: 24px;
+  --text-tds-60--line-height: 28px;
+  --text-tds-50: 20px;
+  --text-tds-50--line-height: 28px;
+  --text-tds-40: 17px;
+  --text-tds-40--line-height: 24px;
+  --text-tds-30: 14px;
+  --text-tds-30--line-height: 20px;
+  --text-tds-20: 12px;
+  --text-tds-20--line-height: 20px;
+  --text-tds-10: 10px;
+  --text-tds-10--line-height: 18px;
+
+  --radius-tds: 4px;
+
+  --shadow-tds-sm: 0 4px 8px 0 rgb(0 0 0 / 0.08);
+  --shadow-tds-md: 0 8px 16px 0 rgb(0 0 0 / 0.12);
+  --shadow-tds-lg: 0 8px 16px 0 rgb(0 0 0 / 0.16);
+
+  --ease-tds: cubic-bezier(0.5, 0, 0, 0.75);
+  --ease-tds-mktg: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-tds-backdrop: cubic-bezier(0.75, 0, 0, 1);
 }
 
 /* Responsive type + spacing scale (Relume tokens), switched by breakpoint */
