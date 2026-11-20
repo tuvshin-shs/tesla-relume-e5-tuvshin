@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TdsButton } from "@/components/tds/TdsButton";
+import { TdsLabel } from "@/components/tds/TdsLabel";
 
 export default function NotFound() {
   return (
@@ -9,7 +10,7 @@ export default function NotFound() {
         <Image src="/assets/tesla-logo.svg" alt="Tesla" width={120} height={16} />
       </Link>
       <div className="flex flex-col gap-2">
-        <p className="text-tds-20 font-medium tracking-[0.08em] text-tds-grey-30 uppercase">Алдаа 404</p>
+        <TdsLabel className="mx-auto">Алдаа 404</TdsLabel>
         <h1 className="text-tds-80 font-medium text-tds-grey-10">Хуудас олдсонгүй</h1>
         <p className="max-w-[48ch] text-tds-40 text-tds-grey-30">
           Таны хайсан хуудас устсан, нэр нь өөрчлөгдсөн эсвэл хаяг буруу бичигдсэн байж магадгүй.

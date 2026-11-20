@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type MouseEvent, useEffect, useRef, useState } from "react";
 import { TdsButton } from "@/components/tds/TdsButton";
+import { TdsLabel } from "@/components/tds/TdsLabel";
 import { mainNav } from "@/data/navigation";
 import { vehicles } from "@/data/vehicles";
 import { cn } from "@/lib/cn";
@@ -159,7 +160,7 @@ export function Navbar() {
           </div>
           <nav aria-label="Үндсэн цэс" className="flex flex-col gap-8 px-6 pb-10">
             <div className="flex flex-col gap-2">
-              <p className="text-tds-20 font-medium tracking-[0.08em] text-tds-grey-30 uppercase">Тээврийн хэрэгсэл</p>
+              <TdsLabel>Тээврийн хэрэгсэл</TdsLabel>
               <ul className="flex flex-col">
                 {vehicles.map((v) => (
                   <li key={v.slug}>

@@ -1,15 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ProductCard } from "@/components/ProductCard";
+import { ChevronIcon, TdsIconButton } from "@/components/tds/TdsIconButton";
 import { Section } from "@/components/ui/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { vehicles } from "@/data/vehicles";
-
-const arrowClass =
-  "flex size-10 items-center justify-center rounded-tds bg-tds-grey-70 transition-colors duration-330 hover:bg-tds-grey-65 " +
-  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tds-grey-35 disabled:cursor-default disabled:opacity-40 disabled:hover:bg-tds-grey-70";
 
 export function ProductCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -40,36 +36,31 @@ export function ProductCarousel() {
 
   return (
     <Section id="models" className="flex flex-col gap-10 md:gap-12">
-      <div className="flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
-        <SectionTitle
-          label="Загварууд"
-          title="Өөрт тохирох Tesla-гаа олоорой"
-          description="Явах зай, хурд, үнийг харьцуулаад өөрийн загвараа сонгоорой."
-          className="md:flex-1"
-        />
-        <div className="flex gap-3">
-          <button
-            type="button"
-            aria-label="Өмнөх загварууд"
-            aria-controls="model-track"
-            disabled={!canPrev}
-            onClick={() => scroll(-1)}
-            className={arrowClass}
-          >
-            <Image src="/assets/arrow-back.svg" alt="" width={24} height={24} />
-          </button>
-          <button
-            type="button"
-            aria-label="Дараагийн загварууд"
-            aria-controls="model-track"
-            disabled={!canNext}
-            onClick={() => scroll(1)}
-            className={arrowClass}
-          >
-            <Image src="/assets/arrow-forward.svg" alt="" width={24} height={24} />
-          </button>
-        </div>
-      </div>
+      <SectionTitle
+        label="Загварууд"
+        title="Өөрт тохирох Tesla-гаа олоорой"
+        description="Явах зай, хурд, үнийг харьцуулаад өөрийн загвараа сонгоорой."
+        action={
+          <div className="flex gap-3">
+            <TdsIconButton
+              label="Өмнөх загварууд"
+              aria-controls="model-track"
+              disabled={!canPrev}
+              onClick={() => scroll(-1)}
+            >
+              <ChevronIcon direction="left" />
+            </TdsIconButton>
+            <TdsIconButton
+              label="Дараагийн загварууд"
+              aria-controls="model-track"
+              disabled={!canNext}
+              onClick={() => scroll(1)}
+            >
+              <ChevronIcon />
+            </TdsIconButton>
+          </div>
+        }
+      />
 
       <div
         id="model-track"

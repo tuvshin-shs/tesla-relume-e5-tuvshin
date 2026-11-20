@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { TdsButton } from "@/components/tds/TdsButton";
+import { TdsLabel } from "@/components/tds/TdsLabel";
 import { Section } from "@/components/ui/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { SpecList } from "@/components/vehicle/SpecList";
@@ -42,7 +43,7 @@ export default async function ModelPage({ params }: Props) {
           </div>
           <div className="flex flex-col justify-center gap-10 px-6 py-12 md:px-12 lg:py-16 xl:px-20">
             <div className="flex flex-col gap-2">
-              <p className="text-tds-20 font-medium tracking-[0.08em] text-tds-grey-30 uppercase">{type}</p>
+              <TdsLabel rule>{type}</TdsLabel>
               <h1 className="text-tds-90 font-medium text-tds-grey-10 md:text-tds-100">{name}</h1>
               <p className="max-w-[48ch] text-tds-40 text-tds-grey-20">{tagline}</p>
             </div>
