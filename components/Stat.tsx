@@ -10,20 +10,19 @@ type StatProps = {
   wide?: boolean;
 };
 
+/** TDS spec stat: medium value, 12px grey-30 label. */
 export function Stat({ value, label, wide }: StatProps) {
   return (
-    <div className={cn("flex min-w-0 flex-col gap-2", wide ? "@container md:flex-1" : "md:flex-none")}>
+    <div className={cn("flex min-w-0 flex-col gap-1", wide ? "@container md:flex-1" : "md:flex-none")}>
       <p
         className={cn(
-          "font-bold",
-          wide
-            ? "text-[length:min(var(--fs-h2),12.8cqi)] leading-[1.2] tracking-[-0.01em] whitespace-nowrap"
-            : "text-h2",
+          "font-medium text-tds-grey-10",
+          wide ? "text-[length:min(40px,12.8cqi)] leading-[1.2] whitespace-nowrap" : "text-tds-80",
         )}
       >
         {value}
       </p>
-      <p className="text-base">{label}</p>
+      <p className="text-tds-20 text-tds-grey-30">{label}</p>
     </div>
   );
 }

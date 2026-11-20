@@ -1,30 +1,18 @@
 export type NavLink = { label: string; href: string };
-export type SocialLink = NavLink & { icon: string };
 
-export const navLinks: NavLink[] = [
-  { label: "Vehicle", href: "#" },
-  { label: "Energy", href: "#" },
-  { label: "Charging", href: "#" },
+/** Header links after the "Тээврийн хэрэгсэл" menu. */
+export const mainNav: NavLink[] = [
+  { label: "Цэнэглэлт", href: "/charging" },
+  { label: "Автомат жолоодлого", href: "/fsd" },
+  { label: "Урамшуулал", href: "/offers" },
+  { label: "Тусламж", href: "/support" },
 ];
 
 export const footerLinks: NavLink[] = [
-  { label: "Privacy & Legacy", href: "#" },
-  { label: "Vehicle Recalls", href: "#" },
-  { label: "Contact", href: "#" },
-  { label: "News", href: "#" },
-  { label: "Get Updates", href: "#" },
-];
-
-export const socialLinks: SocialLink[] = [
-  { label: "Facebook", href: "#", icon: "/assets/facebook.svg" },
-  { label: "Instagram", href: "#", icon: "/assets/instagram.svg" },
-  { label: "X", href: "#", icon: "/assets/x.svg" },
-  { label: "LinkedIn", href: "#", icon: "/assets/linkedin.svg" },
-  { label: "YouTube", href: "#", icon: "/assets/youtube.svg" },
-];
-
-export const legalLinks: NavLink[] = [
-  { label: "Locations", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Cookies Settings", href: "#" },
+  { label: "Нууцлал ба эрх зүй", href: "https://www.tesla.com/legal" },
+  { label: "Холбоо барих", href: "/support#contact" },
+  { label: "Мэдээ", href: "https://www.tesla.com/blog" },
+  { label: "Мэдээлэл авах", href: "/support#updates" },
+  { label: "Цэнэглэх цэг", href: "/charging" },
+  { label: "Дизайн систем", href: "/styleguide" },
 ];

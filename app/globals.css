@@ -1,28 +1,18 @@
 @import "tailwindcss";
 
-/* Breakpoints match the legacy site: base = phone (≤767), md = tablet (768–991), lg = desktop (≥992) */
+/*
+ * Breakpoints: base = phone (≤767), md = tablet (768–991), lg = desktop (≥992).
+ * The site itself is styled only with the `tds-*` tokens below (see /styleguide).
+ */
 @theme {
   --breakpoint-lg: 62rem;
 
   --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
-
-  --color-primary: #3e6ae1; /* Tesla blue; white text passes WCAG AA */
-  --color-primary-hover: #3457c0;
-  --color-primary-active: #2c4aa6;
-  --color-ink: #02070b;
-  --color-surface: #f2f2f2;
-  --color-muted: #5c5e62;
-  --color-line: rgba(2, 7, 11, 0.15);
-
-  --text-large: 22px;
-  --text-large--line-height: 1.5;
-  --text-small: 14px;
-  --text-small--line-height: 1.5;
 }
 
 /*
  * REBA design system tokens (from reba.mn), used by /reba-styleguide.
- * Prefixed "reba-" so they never collide with the Tesla tokens above.
+ * Prefixed "reba-" so they never collide with the TDS tokens.
  * `inline` so the font stacks resolve the next/font variables set on the styleguide layout.
  */
 @theme inline {
@@ -146,54 +136,6 @@
   --ease-tds-backdrop: cubic-bezier(0.75, 0, 0, 1);
 }
 
-/* Responsive type + spacing scale (Relume tokens), switched by breakpoint */
-@theme inline {
-  --text-h1: var(--fs-h1);
-  --text-h1--line-height: 1.2;
-  --text-h1--letter-spacing: -0.01em;
-  --text-h2: var(--fs-h2);
-  --text-h2--line-height: 1.2;
-  --text-h2--letter-spacing: -0.01em;
-  --text-h5: var(--fs-h5);
-  --text-h5--line-height: 1.4;
-  --text-h5--letter-spacing: -0.01em;
-  --text-medium: var(--fs-medium);
-  --text-medium--line-height: 1.5;
-}
-
-:root {
-  --fs-h1: 40px;
-  --fs-h2: 36px;
-  --fs-h5: 22px;
-  --fs-medium: 16px;
-  --pad-x: 20px; /* page gutter */
-  --sec-y: 64px; /* large section padding */
-  --sec-y-md: 48px; /* medium section padding (footer) */
-}
-
-@media (width >= 48rem) {
-  :root {
-    --fs-h1: 56px;
-    --fs-h2: 44px;
-    --fs-h5: 24px;
-    --fs-medium: 18px;
-    --pad-x: 32px;
-    --sec-y: 80px;
-    --sec-y-md: 64px;
-  }
-}
-
-@media (width >= 62rem) {
-  :root {
-    --fs-h1: 72px;
-    --fs-h2: 52px;
-    --fs-h5: 28px;
-    --pad-x: 64px;
-    --sec-y: 112px;
-    --sec-y-md: 80px;
-  }
-}
-
 @utility no-scrollbar {
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -201,6 +143,12 @@
   }
 }
 
-body {
-  line-height: 1.5;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

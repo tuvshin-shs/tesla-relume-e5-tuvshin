@@ -25,6 +25,7 @@ const nav = [
 export default function RebaStyleguideLayout({ children }: { children: ReactNode }) {
   return (
     <div
+      lang="en"
       className={cn(
         onest.variable,
         literata.variable,

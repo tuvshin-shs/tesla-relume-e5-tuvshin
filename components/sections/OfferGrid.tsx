@@ -4,7 +4,7 @@ import { offers } from "@/data/offers";
 
 export function OfferGrid() {
   return (
-    <Section className="flex flex-col gap-8 lg:flex-row">
+    <Section className="flex flex-col gap-6 lg:flex-row">
       {offers.map((offer) => (
         <OfferCard key={offer.title} offer={offer} />
       ))}

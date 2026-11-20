@@ -2,26 +2,21 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 type SectionProps = {
-  bg?: "white" | "gray";
-  /** Remove top padding (used when the previous section already provides the gap) */
-  flushTop?: boolean;
-  /** Classes for the inner 1280px container */
+  bg?: "white" | "grey";
+  /** Classes for the inner 1200px container */
   className?: string;
   id?: string;
   children: ReactNode;
 };
 
-export function Section({ bg = "white", flushTop, className, id, children }: SectionProps) {
+/** Page section: TDS gutters (24 / 48px), 64–96px vertical rhythm, 1200px content width. */
+export function Section({ bg = "white", className, id, children }: SectionProps) {
   return (
     <section
       id={id}
-      className={cn(
-        "overflow-hidden px-(--pad-x) py-(--sec-y)",
-        bg === "gray" ? "bg-surface" : "bg-white",
-        flushTop && "pt-0",
-      )}
+      className={cn("scroll-mt-14 px-6 py-16 md:px-12 md:py-24", bg === "grey" ? "bg-tds-grey-70" : "bg-white")}
     >
-      <div className={cn("mx-auto w-full max-w-[1280px]", className)}>{children}</div>
+      <div className={cn("mx-auto w-full max-w-[1200px]", className)}>{children}</div>
     </section>
   );
 }

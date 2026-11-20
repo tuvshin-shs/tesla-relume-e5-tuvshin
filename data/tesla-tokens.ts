@@ -142,14 +142,15 @@ export const durations = [
   { value: "600ms", usage: "Medium fades (--tds-animate-transition-duration--medium)" },
 ];
 
-/** Where this site's own tokens (app/globals.css @theme) differ from tesla.com. */
+/** This site's values (all pages now use the tds-* tokens and TdsButton) next to tesla.com. */
 export const comparison = [
   { property: "Primary blue", site: "#3E6AE1", tesla: "#3E6AE1", match: true },
   { property: "Muted text", site: "#5C5E62", tesla: "#5C5E62", match: true },
-  { property: "Heading / ink", site: "#02070B", tesla: "#171A20", match: false },
-  { property: "Light surface", site: "#F2F2F2", tesla: "#F4F4F4", match: false },
-  { property: "Button radius", site: "12px", tesla: "4px", match: false },
-  { property: "Button height", site: "44px", tesla: "40px", match: false },
-  { property: "Button text", site: "16px / 500", tesla: "14px / 500", match: false },
-  { property: "Hero title (desktop)", site: "72px", tesla: "40px / 500", match: false },
+  { property: "Heading / ink", site: "#171A20", tesla: "#171A20", match: true },
+  { property: "Light surface", site: "#F4F4F4", tesla: "#F4F4F4", match: true },
+  { property: "Button radius", site: "4px", tesla: "4px", match: true },
+  { property: "Button height", site: "40px", tesla: "40px", match: true },
+  { property: "Button text", site: "14px / 500", tesla: "14px / 500", match: true },
+  { property: "Hero title (desktop)", site: "40px / 500", tesla: "40px / 500", match: true },
+  { property: "Typeface", site: "Inter (stand-in)", tesla: "Universal Sans", match: false },
 ];

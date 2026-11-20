@@ -16,7 +16,7 @@ export function VideoPlayer({ youtubeId, title, poster, className }: VideoPlayer
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className={cn("relative overflow-hidden rounded-2xl bg-black", className)}>
+    <div className={cn("relative overflow-hidden rounded-tds bg-black", className)}>
       {playing ? (
         <iframe
           className="absolute inset-0 h-full w-full border-0"
@@ -28,19 +28,13 @@ export function VideoPlayer({ youtubeId, title, poster, className }: VideoPlayer
         />
       ) : (
         <>
-          <Image
-            src={poster}
-            alt={`${title} video`}
-            fill
-            sizes="(min-width: 992px) 640px, 100vw"
-            className="object-cover"
-          />
+          <Image src={poster} alt={`${title} — видео`} fill sizes="(min-width: 992px) 640px, 100vw" className="object-cover" />
           <div className="pointer-events-none absolute inset-0 bg-black/20" />
           <button
             type="button"
             onClick={() => setPlaying(true)}
-            aria-label={`Play video: ${title}`}
-            className="absolute top-1/2 left-1/2 z-[1] -translate-x-1/2 -translate-y-1/2 rounded-lg transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            aria-label={`Видео тоглуулах: ${title}`}
+            className="absolute top-1/2 left-1/2 z-[1] -translate-x-1/2 -translate-y-1/2 rounded-full transition-transform duration-330 hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             <Image src="/assets/play-button.svg" alt="" width={64} height={64} />
           </button>

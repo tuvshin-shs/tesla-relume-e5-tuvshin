@@ -1,40 +1,52 @@
 import { cn } from "@/lib/cn";
 
 type SectionTitleProps = {
-  tagline?: string;
+  /** Small uppercase label above the title */
+  label?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
-  /** 16px instead of 24px between title and description */
-  tight?: boolean;
   as?: "h1" | "h2" | "h3";
+  /** "dark" for text on photos */
+  tone?: "light" | "dark";
   className?: string;
-  descriptionClassName?: string;
 };
 
+/** TDS heading block: 12px label, 28→40px medium title, 17px lead. */
 export function SectionTitle({
-  tagline,
+  label,
   title,
   description,
   align = "left",
-  tight,
   as: Heading = "h2",
+  tone = "light",
   className,
-  descriptionClassName,
 }: SectionTitleProps) {
+  const onDark = tone === "dark";
   return (
     <div
       className={cn(
-        "flex w-full flex-col gap-4",
-        align === "center" && "max-w-[768px] items-center text-center",
+        "flex max-w-[75ch] flex-col gap-2",
+        align === "center" && "mx-auto items-center text-center",
         className,
       )}
     >
-      {tagline && <p className="text-base font-semibold">{tagline}</p>}
-      <div className={cn("flex flex-col", tight ? "gap-4" : "gap-6")}>
-        <Heading className="text-h2 font-bold">{title}</Heading>
-        {description && <p className={cn("text-medium", descriptionClassName)}>{description}</p>}
-      </div>
+      {label && (
+        <p
+          className={cn(
+            "text-tds-20 font-medium tracking-[0.08em] uppercase",
+            onDark ? "text-white/80" : "text-tds-grey-30",
+          )}
+        >
+          {label}
+        </p>
+      )}
+      <Heading className={cn("text-tds-70 font-medium md:text-tds-80", onDark ? "text-white" : "text-tds-grey-10")}>
+        {title}
+      </Heading>
+      {description && (
+        <p className={cn("text-tds-40", onDark ? "text-white/85" : "text-tds-grey-30")}>{description}</p>
+      )}
     </div>
   );
 }

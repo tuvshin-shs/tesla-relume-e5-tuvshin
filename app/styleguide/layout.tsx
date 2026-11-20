@@ -19,7 +19,7 @@ const nav = [
 
 export default function StyleguideLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen bg-white font-tds text-tds-30 text-tds-grey-20 antialiased">
+    <div lang="en" className="min-h-screen bg-white font-tds text-tds-30 text-tds-grey-20 antialiased">
       <header className="sticky top-0 z-20 bg-white/95 backdrop-blur">
         <div className="flex h-14 items-center justify-between gap-6 px-6 md:px-12">
           <Link href="/styleguide" className="flex items-center gap-3" aria-label="Tesla styleguide home">

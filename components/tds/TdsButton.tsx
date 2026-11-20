@@ -60,6 +60,14 @@ export function TdsButton({
     className,
   );
 
+  if (href && /^https?:\/\//.test(href)) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+        {children}
+      </a>
+    );
+  }
+
   if (href) {
     return (
       <Link href={href} className={classes}>

@@ -102,7 +102,7 @@ export default function StyleguidePage() {
         id="compare"
         label="Overview"
         title="This site vs tesla.com"
-        lead="The site already shares Tesla's blue and grey text. These are the values that still differ — change them in app/globals.css and components/ui/Button.tsx to match."
+        lead="Every page now uses the tds-* tokens and TdsButton. The only intentional difference is the typeface: Universal Sans is proprietary, so Inter stands in."
       >
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left">

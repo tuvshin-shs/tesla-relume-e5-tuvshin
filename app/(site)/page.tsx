@@ -8,8 +8,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <FsdShowcase />
       <ProductCarousel />
+      <FsdShowcase />
       <OfferGrid />
       <ChargingMap />
     </>

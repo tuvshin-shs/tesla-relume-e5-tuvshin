@@ -3,19 +3,22 @@ export type Offer = {
   text: string;
   image: string;
   href: string;
+  cta: string;
 };
 
 export const offers: Offer[] = [
   {
-    title: "Current Offers",
-    text: "Explore limited-time offers on Tesla vehicles.",
+    title: "Одоогийн урамшуулал",
+    text: "Tesla-ийн загваруудад хамаарах түрээс, санхүүжилтийн нөхцөлүүдтэй танилцаарай.",
     image: "/assets/offer-current.png",
-    href: "#",
+    href: "/offers",
+    cta: "Урамшуулал үзэх",
   },
   {
-    title: "2026 Annual Shareholder Meeting",
-    text: "The future of Tesla is in your hands. Learn why your vote matters.",
+    title: "2026 оны хувьцаа эзэмшигчдийн жилийн хурал",
+    text: "Tesla-ийн ирээдүй таны гарт. Таны санал яагаад чухал болохыг мэдээрэй.",
     image: "/assets/offer-shareholder.png",
-    href: "#",
+    href: "https://ir.tesla.com",
+    cta: "Дэлгэрэнгүй",
   },
 ];
